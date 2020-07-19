@@ -5,11 +5,36 @@
     <title>练习-1：css selector</title>
     <style>
        /* you can test your css at here */
+<!--       .section .title {-->
+<!--            color: Red;-->
+<!--       }-->
+<!--       .section.title {-->
+<!--            color: Blue;-->
+<!--       }-->
+<!--       .section, .title  {-->
+<!--            color: Green;-->
+<!--       }-->
+       .section > .title {
+            color: gray;
+       }
     </style>
 </head>
 <body>
+
+    <h1 id="2" class="section title">.title</h1>
+    <h1 id="3.1" class="title">.title</h1>
+    <h1 id="3.2" class="section">.section</h1>
     <div class="section">
-        <h1 id="title" class="title">title</h1>
+        <ul>
+            <h1 id="1" class="title">.section .title</h1>
+        </ul>
+        <h1 id="4" class="title">.section > .title</h1>
     </div>
+
+<!--    用语义化的HTML不能正确被css选取-->
+    <section>
+        <h1 id="5" class="title">.section > .title</h1>
+    </section>
+
 </body>
 </html>
